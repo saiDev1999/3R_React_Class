@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import Button from "./components/button/button.js"
+import ListComponent from "./components/list/list.js"
+
+
+function Hello(){
+  return(
+    <div>
+      <h1>Hello world</h1>
+      <Button />
+      <h1>Hello world</h1>
+      <Button />
+      <h1>I am login</h1>
+      <Button />
+      <h1>I am signup</h1>
+      <Button />
+      <ListComponent/>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default Hello
+
+
+
+
+
+
+
+
+
+// Component : Component is a piece of reusable and independent bits of code 
+// which is responsible for creating the User interface
+
+// Every components will return  the mark up lang
+// component must always start with capital 
+
+// 2 types of component
+// 1. class based components
+// 2. Functional based components -> most preffered
+
+// Functional based components : This is simply created using normal js functions

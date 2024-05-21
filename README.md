@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+README.md :
+This denotes the purpose of the application , and also we can include steps to run the app
+And also we can give the summary of the application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# npm start
+## npm start
+### npm start
 
-## Available Scripts
+use above command to run the app
 
-In the project directory, you can run:
 
-### `npm start`
+Package.json :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This file denotes the scripts and dependencies required for our project to run
+This file mandatory
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Package-lock.json :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To maintain the consistency of the packages in different systems , versions will be stored in 
+this file
+To run the app, we need Package-lock.json
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+.gitIgnore 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+it helps not to push the unwanted files which is of huge size
+it doesn't track the changes in the mentioned files
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+src :
+This file represents the code part which is responsible for creating the UI
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React : React is used for the single page appkications
+Single page application : It contains only single html file , In this HTML file only content will change 
+React is completely a component based architecture
+component can be as small as button and as large as screen 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Public:
+It Contains the html file and assets required for our project 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Node modules :
+Node modules contains all the dependency code which is used for our react application
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Tasks :
+1. Repeat the class
+2. Git initialize and try to push code to git 
+3. Create a common components ex: Image, Tables, Forms, List 
