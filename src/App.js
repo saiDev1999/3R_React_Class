@@ -16,6 +16,7 @@ function Hello(){
       <Button />
       <ListComponent/>
 <h2>Login feature completed</h2>
+<h3>New feature added 3:49pm</h3>
     </div>
   )
 }
