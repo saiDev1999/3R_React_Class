@@ -1,6 +1,10 @@
 
 
-
+Tasks:
+1. Repeat the class 
+2. React.dev check first 4 sections in describing UI 
+3. How to write code without JSX
+4. Git push based on the branches
 
 
 JSX Concepts :
