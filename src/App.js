@@ -1,24 +1,25 @@
 
 import Button from "./components/button/button.js"
 import ListComponent from "./components/list/list.js"
+import Heading1,{Heading2 as SecondaryHeading,Heading3,Heading4,Heading5} from "./components/headings/headings.js"
 
 
 function Hello(){
+  const isSubscibed=false
+
+
   return(
-    <div>
-      <h1>Hello world</h1>
-      <Button />
-      <h1>Hello world</h1>
-      <Button />
-      <h1>I am login</h1>
-      <Button />
-      <h1>I am signup</h1>
-      <Button />
-      <ListComponent/>
-<h2>Login feature completed</h2>
-<h3>New feature added 3:49pm</h3>
-    </div>
+    <>
+      <Heading1/>
+      <SecondaryHeading/>
+      <Heading3/>
+      <Heading4></Heading4>
+      <Heading5></Heading5>
+     
+
+    </>
   )
+
 }
 
 export default Hello
