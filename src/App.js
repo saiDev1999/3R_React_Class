@@ -7,14 +7,45 @@ import Heading1,{Heading2 as SecondaryHeading,Heading3,Heading4,Heading5} from "
 function Hello(){
   const isSubscibed=false
 
+  const employees=[
+    {
+      name:"Srikanth",
+      role:"Full stack developer",
+      salary:200000
+    },
+    {
+      name:"sai naik",
+      role:"React developer",
+      salary:100000
+    },
+    {
+      name:"pavan",
+      role:"Angular developer",
+      salary:150000
+    },
+    {
+      name:"pavan",
+      role:"Angular developer",
+      salary:150000
+    }
+  ]
+
 
   return(
     <>
-      <Heading1/>
-      <SecondaryHeading/>
-      <Heading3/>
-      <Heading4></Heading4>
-      <Heading5></Heading5>
+
+    {
+      employees.map((eachEmployee,index)=>{
+        return(
+          <div>
+            <h2>{index+1}</h2>
+            <h3>{eachEmployee.name}</h3>
+            <h3>{eachEmployee.salary}</h3>
+          </div>
+        )
+      })
+    }
+    
      
 
     </>
