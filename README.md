@@ -1,40 +1,76 @@
 
 
-
-
-Tasks:
 1. Repeat the class 
-2. Different scenerious for map, filter, reduce
-3. Take array of employees , filter the employees data based on the salary (filter < 100000)
-4. Show the filtered data in a table
-5. Pending JS projects
-
-
-
-
-
-Map method in js :
-1. Map is a array method which iterates and perform the logics for each element and returns the value
-2. Map finally returns the array
-
-
-forEach method in js :
-1. forEach is a array method which iterates and perform the logics for each element 
-2. forEach doesn't return any array but returns undefined
-
-filter method in js :
-1. filter is a array method which iterates and returns the boolean based on the value
-2. filter finally return the array
-
-reduce method in js :
-1. reduce is a array method which reduces whole values into single value based on the logical 
-2. reduce finally returns the single value
+2. List out the limitations of using react
+3. Rendering the list items in react using map 
+4. Show the ipl teams names and team player names using map method
+5. Show the ipl teams names and team player names using map method in a table format
 
 
 
 
 
 
+List rendering :
+
+In react we will render the list(array) using map method
+map is used to iterate the UI in the jsx
+
+whenever we are using map method we must include the key(prop),
+This helps react to give unique id to the elements which results in faster updates and deletes 
+We can increase the performance of react app
+
+Fragments : 
+1. <></>
+2. <React.Fragment></React.Fragment>
+
+limitation of fragment:
+1. we cannot apply the styles 
+
+
+
+React features :
+
+1. Virtual dom : for effient updates , less loading time
+2. Component-Based Architecture : divide and conquer ,  entire screen will be build based on the blocks of codes called as Components
+3. Unidirectional Data Flow : data flow will happen from parent to child
+4. Declarative Syntax : we will give whatever we want directky without using any dom methods
+5. JSX : we can embed markup in js file
+
+note: Browser doesn't understand the JSX code directly 
+Babel is used for converting JSX code to the JS object notation code
+Babel is inbuilt in react
+Babel is a transpiler
+ 
+
+Advantages of react :
+1. Large and Active Community
+2. Ecosystem and Tooling  ex: phone pay in react app, google signi in
+3. Backed by Facebook : More users - less chance of degrading 
+4. Smooth Migration and Integratio : we can migrate easily
+ https://transform.tools/html-to-jsx 
+5. We can go with mobile apps using React native
+
+
+
+
+
+Dom : Document object model drawbacks
+
+1. Wherever any element changes entire dom has to reload , updates will slower,
+response time is more, loading time will be more 
+
+
+Virtual dom : This is memory representation of original dom (copy of dom)
+Wherever any element changes instead of reloading entire dom , it will only change the particular element or component
+
+2 algorithms :
+1. diffing : whenever any change occurs it will compare the previous and current dom, 
+comparison will happen at this
+2. reconcilliation : Updating the changes will happen here 
+
+using v-dom we can have faster updates and less loading time
+ex: Youtube button , Instagram likes
 
 
 
@@ -47,81 +83,24 @@ reduce method in js :
 
 
 
-Tasks:
-1. Repeat the class 
-2. React.dev check first 4 sections in describing UI 
-3. How to write code without JSX
-4. Git push based on the branches
 
 
-JSX Concepts :
-JSX Stands for javascript and XML
-JSX Syntax will be followed by the react 
-JSX allows us to write markup(HTML) inside our js file
-Using JSX i can write js and html together without taking separate file or scripts
+3 lions 3 deers
 
-ES 6 features 
-1. Arrow functions
-2. let const
-3. destructring
-4. promises 
-5. modules 
-6. rest operators and spread operator 
-7. string liternals
-8. Ternary operator
+cross the river 
 
-
-rules of JSX :
-1. Every component must return single parent (container ex : div , ol , react fragment etc)
-2. while writing js code always use curly braces inside the return
-3. class must be replaced with className
-class is predefined keyword in react for creating the class components 
-4. Every attribute must be lowerCamerCase
+1. One boat 
+2. If deer count is less than lion count , lion will eat the deer
+3. at a time boat 2
 
 
 
-1. Ternary operator :
-  
-
-  condition ? expression1 : expression 2
 
 
-  To render screen conditionally : we use Ternary operator mostly in react
-
-  conditional rendering in react :
-
-  1. if /else
-  2. ternary operator
-  3. logical operator or short-circuit operator &&
 
 
-  exports and imports in react 
-  They are 2 ways to export the component or function or variable 
-
-  1. Default export
-    Every module or file can contain only one default export
-    Default export is imported with any name 
-
-  2. Named export 
-    Every module or file can contain multiple name exports
-     Named export is imported with the  defined name , we have special case , using this we can import with 
-     any name (as)
 
 
-    React fragmenst s:
-    React fragments are empty containers which acts like a shared parent obeying jsx first rule
-    we can eliminate extra div
-   
-    There are 2 ways to use React fragements
-    1. <></>
-    2. <React.Fragment></React.Fragment>
 
-
-4 step 
-1. Define the things
-2. Explain the things
-3. Syntax of the things 
-4. write the things 
-
-
+Output : everyone has to reach safely
 

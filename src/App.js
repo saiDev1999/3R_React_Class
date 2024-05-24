@@ -2,6 +2,7 @@
 import Button from "./components/button/button.js"
 import ListComponent from "./components/list/list.js"
 import Heading1,{Heading2 as SecondaryHeading,Heading3,Heading4,Heading5} from "./components/headings/headings.js"
+import React from "react"
 
 
 function Hello(){
@@ -9,25 +10,16 @@ function Hello(){
 
   const employees=[
     {
-      name:"Srikanth",
-      role:"Full stack developer",
-      salary:200000
+      teamName:"SRH",
+      players:["a","b"],
+      trophy:[2016]
     },
     {
-      name:"sai naik",
-      role:"React developer",
-      salary:100000
+      teamName:"Mumbai",
+      players:["a","b"],
+      trophy:[2016]
     },
-    {
-      name:"pavan",
-      role:"Angular developer",
-      salary:150000
-    },
-    {
-      name:"pavan",
-      role:"Angular developer",
-      salary:150000
-    }
+   
   ]
 
 
@@ -36,12 +28,13 @@ function Hello(){
 
     {
       employees.map((eachEmployee,index)=>{
-        return(
-          <div>
+        const{id,name,salary} =eachEmployee
+                return(
+          <React.Fragment key={id} >
             <h2>{index+1}</h2>
-            <h3>{eachEmployee.name}</h3>
-            <h3>{eachEmployee.salary}</h3>
-          </div>
+            <h3>{name}</h3>
+            <h3>{salary}</h3>
+          </React.Fragment>
         )
       })
     }
