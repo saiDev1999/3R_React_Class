@@ -1,15 +1,11 @@
-
-
-
-
-
-const ListComponent = ()=>{
-    return(
-        <ol>
-            <li>Apple</li>
-            <li>Banana</li>
-            <li>Watermelon</li>
-        </ol>
-    )
-}
-export default ListComponent
+import styles from "../headings/heading.module.css";
+const ListComponent = () => {
+  return (
+    <ol>
+      <li className={styles.heading}>Apple</li>
+      <li className="head-text">Banana</li>
+      <li className="head-text">Watermelon</li>
+    </ol>
+  );
+};
+export default ListComponent;
