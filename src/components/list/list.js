@@ -1,10 +1,12 @@
 import styles from "../headings/heading.module.css";
-const ListComponent = () => {
+const ListComponent = (prop) => {
+  const { list } = prop;
+  console.log(list);
   return (
     <ol>
-      <li className={styles.heading}>Apple</li>
-      <li className="head-text">Banana</li>
-      <li className="head-text">Watermelon</li>
+      {list.map((each) => {
+        return <li>{each}</li>;
+      })}
     </ol>
   );
 };

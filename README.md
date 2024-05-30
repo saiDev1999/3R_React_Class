@@ -1,52 +1,27 @@
-Tasks:
-
 1. Repeat the class
-2. Ipl teams in the acoordion
-3. 5 custom components (Progress bars, tables, spinners, corousels, Modals)
-4. explore other css frameworks
+2. Give all teams in a accordion , user can see the teams by clicking the accordion
+3. Implement corousel in react using library (https://www.npmjs.com/package/react-responsive-carousel)
+4. check the prop section in docs https://react.dev/learn/passing-props-to-a-component
 
-a. 1000
-b. 500
-c. 600
-d. 900
+Props :
+Props are the additional information or data given to the component(parent to child data flow)
+Props can have capacity to cotrol what we need to show to the user (UI)
+we can have multiple Props to the component
+Props are immutable (we cannot change the prop)
 
-Generally we have 3 most used styles we can apply for react
+Definition2 : Props are the way to transfer the data from parent component to child component
 
-1. inline styles (object styles)
-   Note : every time css will be recalculates
-2. external styles (.css extension)
-   Note : every children can utilise the styles if we are using same class names, id etc
+we have 2 ways for props
 
-3. external module styles (.module.css)
+1. Additional info for component
+2. children prop (nesting the component between other component)
 
-4. external library styles stylesheets(bootstrap, React bootstrap, material UI, ant Design, Tailwind css etc)
+Props are simply js objects
 
-How to install boottrap
+Team name
 
-1. CDN Links
-2. Through NPM package
+1. List
 
-npm : node package manager : it is centralized for all the open node packages
-class based components
+Team name
 
-1. Render method : It is a method which is essential for inserting the elements (JSX)inside the dom
-
-components 2ways
-
-1. class
-2. functional
-
-2011 facebook
-2013 open source
-
-2013-2018 :
-dynamic nature (dynamic websites) -> 1. class
-static parts -> 2. functional
-
-2018 (React major version release 16.8 version)
-Hooks concept introduced in functional components
-
-> 2018
-
-dynamic nature (dynamic websites) -> functional components
-class rarely used
+1. List

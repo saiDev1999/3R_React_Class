@@ -3,28 +3,16 @@ import "./heading.css";
 import ListComponent from "../list/list";
 import styles from "./heading.module.css";
 
-const Heading1 = () => {
-  const headingStyle = {
-    color: "red",
-    backgroundColor: "black",
-  };
-  return (
-    <div>
-      <h1 className={styles.heading}>H1 heading...</h1>
-      <h2 className="head-text">H2 heading...</h2>
-      <h3 className="head-text">H3 heading...</h3>
-      <ListComponent />
-    </div>
-  );
+const Heading1 = (prop) => {
+  const { title } = prop;
+
+  return <h2>{title}</h2>;
 };
 export default Heading1;
 
-export const Heading2 = () => {
-  return (
-    <React.Fragment>
-      <h2>H1 heading...</h2>
-    </React.Fragment>
-  );
+export const Heading2 = (prop) => {
+  const { title } = prop;
+  return <h2>{title}</h2>;
 };
 
 export const Heading3 = () => {
