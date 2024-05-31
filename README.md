@@ -1,27 +1,83 @@
-1. Repeat the class
-2. Give all teams in a accordion , user can see the teams by clicking the accordion
-3. Implement corousel in react using library (https://www.npmjs.com/package/react-responsive-carousel)
-4. check the prop section in docs https://react.dev/learn/passing-props-to-a-component
+state : state is a object which holds the data or information of a particular component
 
-Props :
-Props are the additional information or data given to the component(parent to child data flow)
-Props can have capacity to cotrol what we need to show to the user (UI)
-we can have multiple Props to the component
-Props are immutable (we cannot change the prop)
+state is mutable
 
-Definition2 : Props are the way to transfer the data from parent component to child component
+state is private , we can't use in other component without forwarding
 
-we have 2 ways for props
+example: YOUTUBE button
 
-1. Additional info for component
-2. children prop (nesting the component between other component)
+state or data -> subscribe
 
-Props are simply js objects
+ <!-- 
+ Wrong usage 
+ let message="subscribe"
+ message="subscribed" -->
 
-Team name
+state can change to subscribed when event occurs
 
-1. List
+state can hold any type of data
 
-Team name
+To change the state we need to use setState method in react class components
+direct re-assinging is not possible in react
 
-1. List
+There are 2ways to create state in react class based components
+
+1. Object way of creation
+2. constructor way of creation
+
+3. we will show some list of employees , role , salary , experience
+
+filters : roles
+react developer
+angular developer
+All
+
+salary
+
+const arry=[
+{
+name :"biryani",
+price:200
+},
+{
+name :"haleem",
+price:20
+}
+]
+
+const discountPercentage=50
+const totalWithDiscount = arry.map(eachObject=>{
+return {...eachObject,quantity:2}
+}).reduce((accumulator,current)=>{
+return accumulator+(current.price*current.quantity)
+},0)*((100-discountPercentage)/100)
+
+console.log(totalWithDiscount)
+
+Question :
+
+1. 5 jars , each jar contains some candies
+2. one jar contains poisonous candies
+
+Our target is to find the poisonous jar
+
+option : we can use digital machine for one time
+poisonous candies weight is less than normal candies
+
+normal candies weight 10 grams
+
+poisonous candies weight 9 grams
+
+jars contains > 100
+
+A, B, C, D, E
+
+1 candie
+2 candie
+3 candie
+4 candie
+5 candie
+
+150
+
+145
