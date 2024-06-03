@@ -1,3 +1,18 @@
+Tasks :
+
+1. Repeat the class
+2. give add circle button , when we click on it new circle has to add
+3. add new image to the corousel using states using button
+
+React state changes were asynchronous
+
+setState : it is method which is used to mutuate the state in class based component
+
+setState will acccept 2 args
+
+1. object
+2. callback function
+
 state : state is a object which holds the data or information of a particular component
 
 state is mutable
