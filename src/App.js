@@ -6,6 +6,7 @@ import GreetingComponent from "./components/greeting/greeting.js";
 import Heading1, { Heading2 } from "./components/headings/headings.js";
 import ListComponent from "./components/list/list.js";
 import YoutubeButton from "./components/youtubeButton/youtubeButton.js";
+import ProductListing from "./components/productListing/productListing.js";
 
 function Hello() {
   const teams = [
@@ -28,7 +29,7 @@ function Hello() {
 
   return (
     <>
-      <YoutubeButton />
+      <ProductListing />
     </>
   );
 }
