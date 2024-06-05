@@ -2,6 +2,8 @@ import { Component } from "react";
 import ImageComponent from "../image/image";
 import ListComponent from "../list/list";
 import Heading1, { Heading4 } from "../headings/headings";
+import axios from "axios";
+import RotatingLineSpinner from "../spinner/rotating-spinner";
 
 class ProductListing extends Component {
   state = {
@@ -29,29 +31,53 @@ class ProductListing extends Component {
   //   };
 
   // using async and await to collect promises for async js
+  // fetchProducts = async () => {
+  //   const response1 = await fetch("https://dummyjson.com/recipes");
+  //   const finalResponce = await response1.json();
+
+  //   const { recipes } = finalResponce;
+
+  //   this.setState(
+  //     {
+  //       recipesList: recipes,
+  //       isSucess: true,
+  //     },
+  //     () => {
+  //       console.log(this.state.recipesList, "inside setState");
+  //     }
+  //   );
+  // };
+
   fetchProducts = async () => {
-    const response1 = await fetch("https://dummyjson.com/recipes");
-    const finalResponce = await response1.json();
+    try {
+      const { data, status } = await axios.get("https://dummyjson.com/recipes");
 
-    const { recipes } = finalResponce;
+      const { recipes } = data;
 
-    this.setState(
-      {
-        recipesList: recipes,
-        isSucess: true,
-      },
-      () => {
-        console.log(this.state.recipesList, "inside setState");
+      if (status === 200) {
+        this.setState(
+          {
+            recipesList: recipes,
+            isSucess: true,
+          },
+          () => {
+            console.log(this.state.recipesList, "inside setState");
+          }
+        );
+      } else {
+        alert("api not success");
       }
-    );
+    } catch (err) {
+      console.log(err);
+    }
   };
+  componentDidMount() {
+    this.fetchProducts();
+  }
   render() {
     return (
       <>
         <h2>Product Listing</h2>
-        <button onClick={this.fetchProducts}>
-          Click to retrive the products
-        </button>
 
         {this.state.isSucess ? (
           this.state.recipesList.map((eachRecipe) => {
@@ -67,7 +93,12 @@ class ProductListing extends Component {
             );
           })
         ) : (
-          <h3>Loading....</h3>
+          <RotatingLineSpinner
+            height={"160"}
+            width={"150"}
+            strokeColor={"red"}
+            visible={true}
+          />
         )}
       </>
     );
