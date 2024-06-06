@@ -29,7 +29,7 @@ function Hello() {
 
   return (
     <>
-      <ProductListing />
+      <ProductListing favcol={"green"} />
     </>
   );
 }
