@@ -1,6 +1,22 @@
 Tasks :
 
 1. Repeat the class
+2. Understand the code between different life cycles methods
+3. When to use the pure component and when not to use the pure component
+4. Difference between functional and class components
+5. try pagination with class based components
+
+By default child gets re-render when parent renders
+by using Pure component in react class based components
+we can prevent the unnecessary renders of child
+
+pure component will checks whether its props or state changed , if not component will stay like before without re-renders
+
+Pure component is performance optimising techniques which contains the shouldComponentUpdate life cycle
+
+Tasks :
+
+1. Repeat the class
 2. Read the lifecycle document from w3 schools
 3. Authentication and authorisation
 4. which is better functionl or class components in react
@@ -54,3 +70,8 @@ It takes state as an argument, and returns an object with changes to the state.
    , we can get the snap shots of the state nd props
 
 3. Unmounting phase -> Elements or components removed from the dom
+4. Component will unmount
+
+Memory leaks: Components can leaks the memory while using event listeners , timers , any subscribtions
+
+To prevent Memory leaks or clean up the component while being unmounted we use Component will unmount method

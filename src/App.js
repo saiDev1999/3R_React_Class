@@ -7,6 +7,7 @@ import Heading1, { Heading2 } from "./components/headings/headings.js";
 import ListComponent from "./components/list/list.js";
 import YoutubeButton from "./components/youtubeButton/youtubeButton.js";
 import ProductListing from "./components/productListing/productListing.js";
+import UnmountingPhase from "./components/unmounting/parent.js";
 
 function Hello() {
   const teams = [
@@ -29,7 +30,8 @@ function Hello() {
 
   return (
     <>
-      <ProductListing favcol={"green"} />
+      {/* <ProductListing favcol={"green"} /> */}
+      <UnmountingPhase />
     </>
   );
 }
