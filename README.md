@@ -1,77 +1,56 @@
-Tasks :
-
-1. Repeat the class
-2. Understand the code between different life cycles methods
-3. When to use the pure component and when not to use the pure component
-4. Difference between functional and class components
-5. try pagination with class based components
-
-By default child gets re-render when parent renders
-by using Pure component in react class based components
-we can prevent the unnecessary renders of child
-
-pure component will checks whether its props or state changed , if not component will stay like before without re-renders
-
-Pure component is performance optimising techniques which contains the shouldComponentUpdate life cycle
-
-Tasks :
-
-1. Repeat the class
-2. Read the lifecycle document from w3 schools
-3. Authentication and authorisation
-4. which is better functionl or class components in react
-
 Tasks:
 
 1. Repeat the class
-2. Filter the data on click of buttons(take the roles buttons)
-3. axios and fetch
-4. Class and functional components
-5. Atomic design in react
+2. Todo in funtional components
+3. create some common components ex: card , pass the props
+4. try example from https://react.dev/learn/state-a-components-memory
+5. read about https://react.dev/learn/responding-to-events
 
-Earth
-Human life cycle
+Drawbacks / limitations of class based components
 
-1. Birth phase
-2. survival phase
-3. Expiry phase
+1. this keyword usage
+2. complex syntax
+3. code will spilted into different methods for single functuality
+4. life cycles methods
 
-dom
-component life cycle
+Functional components hooks introduced in 2018 version 16.8
+Hooks : Hooks are simple javascript prefined functions , it let us use of state and other react features without writing the class
+Hooks will start with use keyword
 
-1. Mounting phase -> Elements or components inserted inside the dom
-   (auto invoke)
-   1.1 Contructor -> To initialize the state in react class based components
-   1.2 Component did Mount -> to perform the side effects in class component during early phase
+Examples :
 
-   side effects : side effect are async tasks like fetching data from server (http calls), dom manipulations, event listeners
-   componentDidMount will run only once in a life cycle
+1. useState
+2. useEffect
+3. useRef
+4. useContext
+5. useReducer
+6. useMemo
+7. useCallback
+8. custom hooks
 
-   1.3 getDerivedStateFromProps
-   The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM.
+rules of hooks:
 
-This is the natural place to set the state object based on the initial props.
+1. Hooks must always call at the top of the component
+2. Hooks cannot be used inside the conditions, loops, but we can use conditions inside the hooks
+3. Hooks only used in functional based components
 
-It takes state as an argument, and returns an object with changes to the state.
+useState: useState is a hook in react functional components, which creates and manages the state
 
-1.4 Render -> To insert the jsx in the dom
+it is replica of class constructor state creation + setState in class components
 
-2. Updating phase -> Elements or components updated inside the dom
+syntax :
 
-   2.1 render : To show the updated elements or components in the dom
-   2.2 getDerivedStateFromProps : To check the changes in the state based on the prop
-   2.3 component did update :
-   to perform the side effects in class component during updating phase
+1. useState will accept the initialVariable (any data type)
+   useState(null)
 
-   side effects : side effect are async tasks like fetching data from server (http calls), dom manipulations, event listeners
-   2.4 shouldComponentUpdate : it can restrict the component updates if it returns false
-   or else we can update the component
-   2.5 getSnapShotBeforeUpdate : it gives the state and prop before being updated
-   , we can get the snap shots of the state nd props
+2. useState will returns the array
 
-3. Unmounting phase -> Elements or components removed from the dom
-4. Component will unmount
+const arry = useState(0)
 
-Memory leaks: Components can leaks the memory while using event listeners , timers , any subscribtions
+const[current,setCurrent]=useState(0)
 
-To prevent Memory leaks or clean up the component while being unmounted we use Component will unmount method
+this arry consists 2 elements ,
+1st -> currentState value
+2nd -> updaterFunction (to update the currentState value)
+
+we can create as many independent states in functional components

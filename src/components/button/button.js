@@ -1,8 +1,11 @@
 const ButtonComponent = (prop) => {
   console.log(prop);
-  const { text, textColor = "yellow" } = prop;
+  const { text, textColor = "yellow", onSmash } = prop;
   return (
-    <button style={{ color: textColor, backgroundColor: "green" }}>
+    <button
+      style={{ color: textColor, backgroundColor: "green" }}
+      onClick={onSmash}
+    >
       {text}
     </button>
   );
