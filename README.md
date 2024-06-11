@@ -1,56 +1,30 @@
 Tasks:
 
 1. Repeat the class
-2. Todo in funtional components
-3. create some common components ex: card , pass the props
-4. try example from https://react.dev/learn/state-a-components-memory
-5. read about https://react.dev/learn/responding-to-events
+2. Registration form
+3. UI of registration form
+4. Apply validations
+5. set the user data in local storage
 
-Drawbacks / limitations of class based components
+Uncontrolled forms :
 
-1. this keyword usage
-2. complex syntax
-3. code will spilted into different methods for single functuality
-4. life cycles methods
+1. consider the form in jsx , create component
+2. Based on the inputs, create reference to the dom using useRef hook and attach the reference using ref attribute
+3. onSubmit collect the user inputs using reference.current.value
 
-Functional components hooks introduced in 2018 version 16.8
-Hooks : Hooks are simple javascript prefined functions , it let us use of state and other react features without writing the class
-Hooks will start with use keyword
+Forms :
 
-Examples :
+generally we have 2 ways for forms in react
 
-1. useState
-2. useEffect
-3. useRef
-4. useContext
-5. useReducer
-6. useMemo
-7. useCallback
-8. custom hooks
+1. Controlled component
 
-rules of hooks:
+In controlled components user input state will be controlled by the react itself
+field validations were possible (individual validations)
 
-1. Hooks must always call at the top of the component
-2. Hooks cannot be used inside the conditions, loops, but we can use conditions inside the hooks
-3. Hooks only used in functional based components
+2. Uncontrolled component
+   In uncontrolled components user input state will be controlled by the DOM
+   only entire form validation can be done at one time (after clicking submit , all fields will be validated )
 
-useState: useState is a hook in react functional components, which creates and manages the state
-
-it is replica of class constructor state creation + setState in class components
-
-syntax :
-
-1. useState will accept the initialVariable (any data type)
-   useState(null)
-
-2. useState will returns the array
-
-const arry = useState(0)
-
-const[current,setCurrent]=useState(0)
-
-this arry consists 2 elements ,
-1st -> currentState value
-2nd -> updaterFunction (to update the currentState value)
-
-we can create as many independent states in functional components
+Validation were must be used while dealing with forms
+client side validation
+server side validation
