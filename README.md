@@ -1,30 +1,21 @@
-Tasks:
+Steps for controlled components in react
 
-1. Repeat the class
-2. Registration form
-3. UI of registration form
-4. Apply validations
-5. set the user data in local storage
+1. create a forms in jsx , create a component
+2. we will take separate or one state for individual inputs elements to control the form
+3. we will attach the state value with the input through value attribute
+4. we also attach onChange attribute handler for controlling the state (this handler will accept the function) for each inputs
+5. To collect the input state value we can use event.target.value with the respestive handler
 
-Uncontrolled forms :
+Topics:
 
-1. consider the form in jsx , create component
-2. Based on the inputs, create reference to the dom using useRef hook and attach the reference using ref attribute
-3. onSubmit collect the user inputs using reference.current.value
+1. Controlled components in react
+2. Field validations
+3. Error notations
+4. Login api call with user creds
 
-Forms :
+Tasks
 
-generally we have 2 ways for forms in react
-
-1. Controlled component
-
-In controlled components user input state will be controlled by the react itself
-field validations were possible (individual validations)
-
-2. Uncontrolled component
-   In uncontrolled components user input state will be controlled by the DOM
-   only entire form validation can be done at one time (after clicking submit , all fields will be validated )
-
-Validation were must be used while dealing with forms
-client side validation
-server side validation
+1. Registration Form UI + Functuanality
+2. Login form UI + Functuanality
+3. Validations for both Registration and Login
+4. Api post login call using axios
