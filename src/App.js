@@ -14,6 +14,7 @@ import UncontrolledForm from "./components/forms/uncontrolled.js";
 import ControlledComponents from "./components/forms/controlled.js";
 import ProductListing from "./components/products/productListing.js";
 import UseEffectEx2 from "./components/useEffect/useEffectEx2.js";
+import NavigationStack from "./navigation/navigation-stack.js";
 
 function Hello() {
   const teams = [
@@ -36,10 +37,7 @@ function Hello() {
 
   return (
     <>
-      {/* <UncontrolledForm /> */}
-      {/* <ControlledComponents /> */}
-      {/* <ProductListing /> */}
-      <UseEffectEx2 />
+      <NavigationStack />
     </>
   );
 }

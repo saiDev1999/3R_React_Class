@@ -6,9 +6,22 @@ import "./styles.css";
 
 const ProductListing = () => {
   const [products, setProducts] = useState([]);
+  const [filterValue, setFilterValue] = useState("All");
+  const [loading, setLoading] = useState(false);
+  const [categories, setCategory] = useState(["All"]);
   useEffect(() => {
+    fetchCategories();
     fetchProducts();
   }, []);
+
+  const fetchCategories = async () => {
+    const { data, status } = await axios.get(
+      "https://fakestoreapi.com/products/categories"
+    );
+    if (status === 200) {
+      setCategory([...categories, ...data]);
+    }
+  };
 
   const fetchProducts = async () => {
     try {
@@ -19,6 +32,7 @@ const ProductListing = () => {
 
       if (status === 200) {
         setProducts(data);
+        setLoading(false);
       } else {
         alert("API request was not successful");
       }
@@ -27,10 +41,41 @@ const ProductListing = () => {
     }
   };
 
+  const handleChange = (event) => {
+    setLoading(true);
+    const optionSelected = event.target.value;
+    console.log("handleChange", optionSelected);
+    setFilterValue(optionSelected);
+    categoryFilterAsyncCall(optionSelected);
+  };
+
+  const categoryFilterAsyncCall = async (optionSelected) => {
+    if (optionSelected === "All") {
+      fetchProducts();
+    } else {
+      const { data, status } = await axios(
+        `https://fakestoreapi.com/products/category/${optionSelected}`
+      );
+      if (status === 200) {
+        setProducts(data);
+        setLoading(false);
+      }
+    }
+  };
+
   return (
     <>
       <h3>Product List</h3>
-      {products.length > 0 ? (
+      <select value={filterValue} onChange={handleChange}>
+        {categories.map((each) => {
+          return (
+            <>
+              <option value={each}>{each}</option>
+            </>
+          );
+        })}
+      </select>
+      {products.length > 0 && !loading ? (
         <div className="product-list">
           {products.map((eachObject) => {
             const { id, title, price, description, category, image, rating } =

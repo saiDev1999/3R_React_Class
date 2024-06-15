@@ -1,75 +1,50 @@
-Topics:
-
-1. UseEffect introduction
-2. Importance of dependency array
-3. case wise useEffect study
-4. count based api calls
-5. dom manipulation based on useEffect
-
 Tasks:
+https://dummyjson.com/recipes -> get all recipes
+https://dummyjson.com/recipes/search?q=Chocolate -> to get individual or list of recipes matches the keyword
 
-1. Repeat the calls
-2. Hit the product listing api , based on length show the buttons
-3. Hit the product details api, based on the click of particular button, show in UI
-4. Hit the category api , show the buttons https://fakestoreapi.com/products/categories
-5. When we click on category button hit https://fakestoreapi.com/products/category/jewelery , show in UI
+1. Dropdown for recipes , after selecting dish name , i need to show the instructions, incredients to make the dish
+2. User can search using input, ex: choc (Filter the list)
+3. Debounce and throattling in js
 
-useEffect hook
+<!-- achor tags , BOM  -->
 
-useEffect is a hook in react funtional components , which allows us to cause the side effects in the component
+<!-- React -> UI  -->
 
-3 life cycles replica:
+https , navigation (react router dom)
 
-1. component did mount
-2. component did update
-3. component will unmount
+React router is a third party library for navigation system in the react project
 
-side effects examples :
+npm i react-router-dom
 
-1. Https calls
-2. Dom manipulations
-3. Event listeners
-4. any third party subscribtions
+https://www.zomato.com/ -> Base URL ->
+business/advertise -> (Static)
 
-useEffect syntax :
+https://www.zomato.com/
+hyderabad/ -> Name of city (dynamic)
+jubilee-hills-restaurants -> Name of area (dynamic)
 
-useEffect will accept 2 args
+http://localhost:3000/ -> Base URL
 
-1. callback function
-2. array (dependency array)
+Navigation :
 
-Note : Behaviour of useEffect will vary depending upon the dependency array
-syntax : useEffect(()=>{},[])
+Static routing or Static navigation
+Dynamic routing or Dynamic navigation
 
-case 1 : empty dependency array
-useEffect(()=>{},[])
+Navigations list :
 
-1. useEffect will acts like a component did mount life cycle method
-2. useEffect will runs only in the first when page loads
-3. Initial https calls (API calls)
+Static list
 
-case 2 : No dependency array
-useEffect(()=>{})
+1. Home
+2. About
+3. Contact
+4. Settings
+5. Product Listing
 
-1. useEffect will call everytime whenver any state or prop changes
-2. sometimes it can leads to infinite loop
-3. app will frozen
+Dynamic list
 
-case 3 : dependency array with variables
-useEffect(()=>{},[variable1,variable2,variable.....])
+1. Product details
 
-1. useEffect will acts like a component did update lifecycle method
-2. whenever variables changed in the array , useEffect will auto invoke
-3. Results will carry forward side effects in the updating phase
+There are 2 ways to navigate the user in the react router dom
 
-case 4 : whenever callback funtion returns another function,
-useEffect(()=>{
-return ()=>{
-
-    }
-
-},[])
-
-1. In this case useEffect will act as component will unmount
-2. returned function will be invoked whenever component removed from dom
-3. we can prevent the memory leaks , which enhances the performance (clean up phase)
+1. Using Link component from react router dom (in-secured way )
+2. using useNavigate hook which is provided react router dom (secured navigations)
