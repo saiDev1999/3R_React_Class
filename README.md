@@ -1,50 +1,21 @@
+Dynamic routing in react (ID routing)
+
+http://localhost:3000/category/productId
+
+category -> DYNAMIC WHICH DENOTES category OF THE PRODUCT
+
+productId -> Unique ID of the product
+
+useParams: useParams is hook provided by react-router-dom , which collect the dynamic information from the URL
+
 Tasks:
-https://dummyjson.com/recipes -> get all recipes
-https://dummyjson.com/recipes/search?q=Chocolate -> to get individual or list of recipes matches the keyword
 
-1. Dropdown for recipes , after selecting dish name , i need to show the instructions, incredients to make the dish
-2. User can search using input, ex: choc (Filter the list)
-3. Debounce and throattling in js
+1. Repeat the class
+2. Change th UI (show description in 2 lines , give ...)
+3. Change the UI for product details (show add to cart button in listing and details page)
+4. authorisation and authenication
+5. what is the protected routing in react (RND)
 
-<!-- achor tags , BOM  -->
+Topics:
 
-<!-- React -> UI  -->
-
-https , navigation (react router dom)
-
-React router is a third party library for navigation system in the react project
-
-npm i react-router-dom
-
-https://www.zomato.com/ -> Base URL ->
-business/advertise -> (Static)
-
-https://www.zomato.com/
-hyderabad/ -> Name of city (dynamic)
-jubilee-hills-restaurants -> Name of area (dynamic)
-
-http://localhost:3000/ -> Base URL
-
-Navigation :
-
-Static routing or Static navigation
-Dynamic routing or Dynamic navigation
-
-Navigations list :
-
-Static list
-
-1. Home
-2. About
-3. Contact
-4. Settings
-5. Product Listing
-
-Dynamic list
-
-1. Product details
-
-There are 2 ways to navigate the user in the react router dom
-
-1. Using Link component from react router dom (in-secured way )
-2. using useNavigate hook which is provided react router dom (secured navigations)
+1. Dynamic routing in react

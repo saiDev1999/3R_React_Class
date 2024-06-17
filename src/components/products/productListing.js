@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import RotatingLineSpinner from "../spinner/rotating-spinner";
 import ImageComponent from "../image/image";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const ProductListing = () => {
   const [products, setProducts] = useState([]);
@@ -82,7 +83,7 @@ const ProductListing = () => {
               eachObject;
             return (
               <div key={id} className="product-card">
-                <h3 className="product-title">{title}</h3>
+                <h3 className="product-title">{title.slice(0, 20)}</h3>
                 <ImageComponent src={image} className="product-image" />
                 <p className="product-category">
                   <strong>Category:</strong> {category}
@@ -90,11 +91,14 @@ const ProductListing = () => {
                 <p className="product-price">
                   <strong>Price:</strong> ${price}
                 </p>
-                <p className="product-description">{description}</p>
+                {/* <p className="product-description">{description}</p> */}
                 <p className="product-rating">
                   <strong>Rating:</strong> {rating.rate} ({rating.count}{" "}
                   reviews)
                 </p>
+                <button>
+                  <Link to={`${category}/${id}`}>Click to see product</Link>
+                </button>
               </div>
             );
           })}

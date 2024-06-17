@@ -5,6 +5,7 @@ import AboutScreen from "../screens/about-screen";
 import ContactScreen from "../screens/contact-screen";
 import SettingScreen from "../screens/setting-screen";
 import InvalidScreen from "../screens/invalid-screen";
+import ProductDetailComponent from "../components/products/productDetails";
 
 function NavigationStack() {
   return (
@@ -18,6 +19,12 @@ function NavigationStack() {
 
         {/* Invalid Routes */}
         <Route path="*" Component={InvalidScreen} />
+        {/* http://localhost:3000/category/productId */}
+        {/* Dynamic Routes */}
+        <Route
+          path={":category/:productId"}
+          Component={ProductDetailComponent}
+        />
       </Routes>
     </BrowserRouter>
   );
