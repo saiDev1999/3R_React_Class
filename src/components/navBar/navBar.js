@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserInfo } from "../../navigation/navigation-stack";
 
 const NavBar = () => {
+  const { name, count } = useContext(UserInfo);
+
   const lightMode = true;
   const linkStyle = {
     textDecoration: "none",
@@ -34,6 +38,10 @@ const NavBar = () => {
             <Link style={linkStyle} to={"/contact"}>
               Contact
             </Link>
+          </li>
+
+          <li className="nav-item">
+            {name} {count}
           </li>
         </ul>
       </div>
