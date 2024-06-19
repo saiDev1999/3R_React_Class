@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useReducer, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeScreen from "../screens/home-screen";
 import AboutScreen from "../screens/about-screen";
@@ -6,12 +6,18 @@ import ContactScreen from "../screens/contact-screen";
 import SettingScreen from "../screens/setting-screen";
 import InvalidScreen from "../screens/invalid-screen";
 import ProductDetailComponent from "../components/products/productDetails";
+import { reducer } from "./jsFuntions";
 
 export const UserInfo = createContext();
 
 function NavigationStack() {
   const [username, setUsername] = useState("ram");
   const [count, setCount] = useState(0);
+  const initialState = {
+    count: 0,
+  };
+
+  const [currentState, dispatch] = useReducer(reducer, initialState);
 
   const increaseCount = () => {
     setCount(count + 1);
@@ -23,6 +29,8 @@ function NavigationStack() {
         salary: 2000,
         count: count,
         increaseCount: increaseCount,
+        currentState: currentState,
+        dispatch: dispatch,
       }}
     >
       <BrowserRouter>

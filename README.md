@@ -1,64 +1,62 @@
-tasks :
-
-1. Repeat the class
-2. take a route for add employee and employee list, on adding the employee , employees has to be added in the employee list using global state mangement
-3. add employee contains the forms which collects the name, salary and designation
-4. prop drilling and what is the global state mangement
-5. context api document
-
 topics:
 
-1. Prop drilling
-2. global state management
-3. context api
-4. useContext hook usage
-5. global counter using context api
+1. useReducer hook in react
+2. useReducer + useContext combination in react
+3. Global counter
 
-<!-- Props :  -->
+tasks :
 
-Prop drilling : Prop drilling is a way to share the data between nested components to reach the final or targeted component
+1. TODO using useReducer hook
+2. Repeat the class
+3. Go through w3 schools react topics , geeks for geeks (useReducer examples)
 
-Drawbacks of prop drilling:
+useState : To create and manage the state(less logic dependent data manipulation) (local state management)
+useReducer : To create and manage the state (complex logics involved during data manipulation )
 
-1. Every intermediate child component needs to disturb
-2. difficulty in mainataining the code (as component structure grows)
-3. sclability gets difficult
-4. every component will participant even though we are not using data in the respective component
+Syntax :
 
-5. Context api
-6. Redux
+useReducer will accept 2 arguments
 
-<!-- State management -->
+1. reducer function
+2. initial state
 
-Managing the data across the application we call it as the state management
-Every application needs better state management for scalable and maintanable code
+useReducer will return array which contains 2 elements
 
-state management is of 2 types
+1. current state
+2. dispatch function
 
-1. local state management (useState)
+state={
+name:"RCB"
+teamPlayers:[{name:"virat"},{name:"maxwell}]
+}
 
-2. global state management
+initialState - nested objects, nested arrays, simple data types
 
-3 ways :
+const[currentState,dispatchFunction]=useReducer(reducerFunction, initialState)
 
-1. Using props (prop drilling)
-2. Context api
-3. Redux
+Try : why we use const always while creating the useState
 
-context api :
-context api is a way to manage the global state in the react application
+useReducer + useContext:
 
-useState + useContext hooks for global state management -> normal states normal logic
+salary : 1000
 
-useReducer + useContext hooks for global state mangement -> complex state complex logic
+action : action is a object which tells us what needs to happen
+ex: {
+type: "INCREMENT_SALARY"
+}
+{
+type: "DECREMENT_SALARY"
+}
+{
+type: "CHANGE_NAME"
+}
 
-steps for context api :
+{
+type: "ADD_TEAM_MEMBER"
+}
 
-1. choose the components that needs to share the data
-2. create a context using createContext method from react , globally
-3. wrap the components using provider with the created context across the targetted components
-4. pass the value prop to the provider and give the data that needs to be shared
-5. choose the targetted component and consume the data using useContext hook , and pass the created context as a argument
+reducerFuntion : reducerFunction is a pure function (only for data manipulation we dont perform any side effects)
+reducerFuntion have the 2 parameters ( state and action)
+reducerFuntion will decides what to happen based on the action that user performed
 
-useContext hook :
-it is used for sharing the data globally and consuming it
+useReducer + useContext -> GLOBAL COUNTER
