@@ -1,62 +1,72 @@
-topics:
+Topics :
 
-1. useReducer hook in react
-2. useReducer + useContext combination in react
-3. Global counter
+1. useMemo in react
+2. React.memo
+3. useCallback in react
 
-tasks :
+Tasks:
 
-1. TODO using useReducer hook
-2. Repeat the class
-3. Go through w3 schools react topics , geeks for geeks (useReducer examples)
+1. Repeat the class
+2. Repeat the examples of React.memo,useCallback,useMemo from w3 schools
 
-useState : To create and manage the state(less logic dependent data manipulation) (local state management)
-useReducer : To create and manage the state (complex logics involved during data manipulation )
+3. useMemo
+4. useCallback
 
-Syntax :
+5. UseMemo and useCallback are the memorization techniques in react application
 
-useReducer will accept 2 arguments
+example :
 
-1. reducer function
-2. initial state
+each milk packet 40rupees and sugar 10/kg
 
-useReducer will return array which contains 2 elements
+1. home --> day 1 -> 1 milk packet and 1kg sugar -> 50 rupees
+2. day 2 -> 1milk and 1kg sugar -> 50 rupee
 
-1. current state
-2. dispatch function
+10 day :
 
-state={
-name:"RCB"
-teamPlayers:[{name:"virat"},{name:"maxwell}]
-}
+useMemo : useMemo is a hook in react funtional components which memorizes the value(cache the value if same inputs were given)
 
-initialState - nested objects, nested arrays, simple data types
+useMemo is a optimisation techniques, which decrease the load time of the app when expensive calculations were happening
 
-const[currentState,dispatchFunction]=useReducer(reducerFunction, initialState)
+syntax :
 
-Try : why we use const always while creating the useState
+useMemo accepts 2 args :
 
-useReducer + useContext:
+1. callback function -> a function where expensive calculations or normal calculations were happenings
+   This function will return the cache result
+2. array-> based on the dependency array callback funtion will executes
 
-salary : 1000
+example : counter 1 and counter 2 which age and salary
 
-action : action is a object which tells us what needs to happen
-ex: {
-type: "INCREMENT_SALARY"
-}
-{
-type: "DECREMENT_SALARY"
-}
-{
-type: "CHANGE_NAME"
-}
+age -> even or odd ->
 
-{
-type: "ADD_TEAM_MEMBER"
-}
+const isEven=
 
-reducerFuntion : reducerFunction is a pure function (only for data manipulation we dont perform any side effects)
-reducerFuntion have the 2 parameters ( state and action)
-reducerFuntion will decides what to happen based on the action that user performed
+useMemo((num)=>{
+let even=num%2===0
+retun even ? "EVEN" : "ODD"
+},[age])
 
-useReducer + useContext -> GLOBAL COUNTER
+isEven(age)
+
+note : Even though we didn't used isEven for salary , by defualt behaviour of react will recalculates the result even when salary changes
+
+useCallback:
+
+1. useCallback is also memorization technique in react
+2. useCallback will memorizes the function
+3. This is also optimisation technique in react
+
+syntax : useCallback accepts 2 args
+
+1. callback function -> a function where we need to memorize , This function dosn't return anything
+2. array-> based on the dependency array callback funtion will executes
+
+React.memo or pure component in class components :
+
+1. funtional component we have React.memo
+2. using React.memo we can skip the re-renders of the components, whenever state or prop doesn't changes
+3. React.memo is a HOC (higher order component)
+
+hoc: a component passed as a argument to other components which gives the enhaced components from where we can reuse the funtional logic
+
+React.memo(App)

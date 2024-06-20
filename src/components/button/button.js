@@ -1,4 +1,7 @@
+import React from "react";
+
 const ButtonComponent = (prop) => {
+  console.log("ButtonComponent re-rendering.....");
   console.log(prop);
   const { text, textColor = "yellow", onSmash } = prop;
   return (
@@ -10,4 +13,4 @@ const ButtonComponent = (prop) => {
     </button>
   );
 };
-export default ButtonComponent;
+export default React.memo(ButtonComponent);
