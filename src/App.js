@@ -15,6 +15,8 @@ import ControlledComponents from "./components/forms/controlled.js";
 import ProductListing from "./components/products/productListing.js";
 import UseEffectEx2 from "./components/useEffect/useEffectEx2.js";
 import NavigationStack from "./navigation/navigation-stack.js";
+import { Provider } from "react-redux";
+import { reduxStore } from "./redux/store.js";
 
 function Hello() {
   const teams = [
@@ -37,7 +39,9 @@ function Hello() {
 
   return (
     <>
-      <NavigationStack />
+      <Provider store={reduxStore}>
+        <NavigationStack />
+      </Provider>
     </>
   );
 }

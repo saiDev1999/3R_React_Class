@@ -1,6 +1,14 @@
 Tasks:
 
 1. Repeat the class
-2. add new book , remove book (action, reducer)
-3. https://medium.com/swlh/understanding-react-redux-and-react-redux-c52d46dd1a04 perform the buy toy actions in redux
-4. Difference between context api and redux and prop drilling
+2. implement toy store in the redux
+3. redux thunk importance
+4. why react is popular with redux
+5. redux and redux toolkit
+
+Topics:
+
+1. Profile actions in redux
+2. useSelector , useDispatch hooks in react redux
+3. react-reduc configuration
+4. combine reducers

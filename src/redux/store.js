@@ -1,4 +1,5 @@
-import { legacyCreateStore } from "redux";
+import { legacy_createStore } from "redux";
 import { bookReducer } from "./books/reducer";
+import { combinedReducer } from "./combineReducer";
 
-export const redux = legacyCreateStore(bookReducer);
+export const reduxStore = legacy_createStore(combinedReducer);

@@ -1,15 +1,15 @@
-const borrowBookAction = () => {
+export const borrowBookAction = (qty) => {
   const borrowBook = {
     type: "BORROW_BOOK",
-    payload: 1,
+    payload: qty,
   };
   return borrowBook;
 };
 
-const returnBookAction = () => {
+export const returnBookAction = (qty) => {
   const returnBook = {
     type: "RETURN_BOOK",
-    payload: 1,
+    payload: qty,
   };
   return returnBook;
 };
